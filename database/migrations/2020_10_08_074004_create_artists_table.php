@@ -15,6 +15,8 @@ class CreateArtistsTable extends Migration
     {
         Schema::create('artists', function (Blueprint $table) {
             $table->id();
+            $table->string('age');
+            $table->string('email');
             $table->timestamps();
         });
 
@@ -25,7 +27,7 @@ class CreateArtistsTable extends Migration
             $table->string('locale', 5)->index();
             $table->string('name');
 
-            
+
             $table->foreign('artist_id')
                 ->references('id')->on('artists')
                 ->onDelete('cascade');
