@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Toriomlab\LaravelMultilang\LaravelMultilangServiceProvider::class,
 
         /*
          * Application Service Providers...

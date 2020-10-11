@@ -3,6 +3,8 @@
 use App\Article;
 use App\Artist;
 use App\ArtistTranslation;
+use App\Product;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 
@@ -52,5 +54,30 @@ Route::group([
 
     Route::get(LaravelLocalization::transRoute('routes.about'), function () {
         return 'about';
+    });
+
+
+    Route::get('toriom', function () {
+        $product = Product::create([
+            'name' => 'iphone',
+            'price' => 1000
+        ]);
+
+        $product->fillTranslation([
+            App::getLocale() => [
+                'name' => 'اي فون'
+            ]
+
+        ]);
+        return [App::getLocale() => [
+            'name' => 'اي فون'
+        ]];
+        return app()->getLocale();
+    });
+
+    Route::get('toriom/get', function () {
+        // return Product::WithTranslations()->get();
+        $product = Product::all();
+        return Product::translate($product);
     });
 });

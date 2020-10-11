@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b48d0a2c7220342a61ae66b2e9302d34",
+    "content-hash": "56e8de979c4194d2f31ab1ca2f5e49d0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4587,6 +4587,40 @@
             "time": "2020-07-13T06:12:54+00:00"
         },
         {
+            "name": "toriomlab/laravel-multilang",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ToriomLab/laravel-multilang.git",
+                "reference": "2542a1b5b3ea065f198af4361a9c1bd93d3b4120"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ToriomLab/laravel-multilang/zipball/2542a1b5b3ea065f198af4361a9c1bd93d3b4120",
+                "reference": "2542a1b5b3ea065f198af4361a9c1bd93d3b4120",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Toriomlab\\LaravelMultilang\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Toriomlab",
+                    "email": "info@toriom.com",
+                    "homepage": "http://toriom.com"
+                }
+            ],
+            "description": "Support Laravel Translations From Database For Translatable Columns In Other Tables",
+            "time": "2020-10-08T10:32:23+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v4.1.8",
             "source": {
@@ -6793,7 +6827,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "toriomlab/laravel-multilang": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
